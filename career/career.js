@@ -5,6 +5,11 @@ console.log(readmoreClick);
 readmoreClick.forEach((item) => {
   console.log(item);
   item.addEventListener("click", (event) => {
+    if (event.target.textContent === "ReadMore")
+      event.target.textContent = "ReadLess";
+    else {
+      event.target.textContent = "ReadMore";
+    }
     event.target
       .closest("div")
       .previousElementSibling.classList.toggle("close-careerinfo");
