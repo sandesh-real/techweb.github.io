@@ -16,7 +16,7 @@ img{
 .main-heading{
     text-align: center;
     font-weight: 900;
-    margin-bottom:1.5rem;
+    margin-bottom:3rem;
     position:relative;
 }
 .main-heading:after{
@@ -100,7 +100,7 @@ main{
 
 }
 .main-aboutus
-{margin:5rem 0 1rem;
+{padding:5rem 0 1rem;
 height:auto;
 }
 .main-aboutus__body{
@@ -146,8 +146,7 @@ margin-bottom: 2rem;
 /*team section start*/
 .main-ourteam{
     position:relative;
-    margin:2rem 0 5rem;
-    padding:2rem 0;
+    padding:4rem 0 5rem;
     background-color: #fff;
 }
 .main-ourteam__para
@@ -226,7 +225,7 @@ margin-bottom: 2rem;
 
 /*our services*/
 .main-ourservices{
-    margin:2rem 0 5rem;
+    padding:2rem 0 5rem;
 }
 .main-ourteam__container
 {
@@ -270,7 +269,7 @@ margin-bottom: 2rem;
 
 /*contact us start */
 .main-contactus{
-    margin:2rem 0 5rem;
+    padding:2rem 0 5rem;
 }
 .main-contactus__container{
     display: flex;
@@ -344,7 +343,8 @@ outline: none;
 @media (min-width:50rem)
 {
     .main-aboutus,.main-ourteam,.main-ourservices,.main-contactus{
-        margin:7rem 0;
+        padding:7rem 0 5rem;
+        margin:0 5rem;
     }
     footer{
         margin-top:7rem 1rem;
