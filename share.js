@@ -39,7 +39,9 @@ if (document.querySelector(".header-body__downarrow")) {
   document.querySelectorAll(".header-nav__menu--list a").forEach((item) => {
     console.log(item);
     item.addEventListener("click", function (event) {
+      console.log(event.target.getAttribute("href") !== "./career/career.html");
       if (event.target.getAttribute("href") !== "./career/career.html") {
+        event.preventDefault();
         document
           .querySelector(this.getAttribute("href"))
           .scrollIntoView({ behavior: "smooth" });
