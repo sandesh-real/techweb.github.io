@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 
 img{
     height:100px;
@@ -26,7 +33,9 @@ width: 7%;
 height: 3px;
 left:50%;
 bottom:-14px;
-transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
 border-radius: 0.7rem;
 
 background-color: #dd6b4d;
@@ -52,7 +61,9 @@ body{
     position:absolute;
     top:50%;
     left:50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
    text-align: center;
     width:100%;
    
@@ -76,19 +87,29 @@ font-weight: 700;
     position:absolute;
     bottom:5%;
     left:50%;
-    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
     font-size:3rem;
     color:#fff;
-    animation-name: downarrow;
-    animation-duration: 1s;
+    -webkit-animation-name: downarrow;
+            animation-name: downarrow;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
    
-  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+   
+          animation-iteration-count: infinite;
   cursor: pointer;
 
 }
+@-webkit-keyframes downarrow{
+    from{-webkit-transform: translateY(0);transform: translateY(0);}
+    to{-webkit-transform: translateY(-5px);transform: translateY(-5px);}
+}
 @keyframes downarrow{
-    from{transform: translateY(0);}
-    to{transform: translateY(-5px);}
+    from{-webkit-transform: translateY(0);transform: translateY(0);}
+    to{-webkit-transform: translateY(-5px);transform: translateY(-5px);}
 }
 
 /*header section end */
@@ -104,8 +125,13 @@ main{
 height:auto;
 }
 .main-aboutus__body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     
   
     height:auto;
@@ -155,14 +181,39 @@ margin-bottom: 2rem;
 }
 
 .main-ourteam__imageContainer{
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: left;
+   -webkit-box-pack: left;
+       -ms-flex-pack: left;
+           justify-content: left;
     margin-top:3rem;
-    overflow: hidden;
- 
-   
-    
+    padding-bottom:3rem;
+    overflow-x: auto; 
 }
+
+/* width */
+.main-ourteam__imageContainer::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  .main-ourteam__imageContainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px grey;
+            box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .main-ourteam__imageContainer::-webkit-scrollbar-thumb {
+    background: #dd6b4d;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .main-ourteam__imageContainer::-webkit-scrollbar-thumb:hover {
+    background: #dd6b4d; 
+  }
 /* .main-ourteam__imageContainer::-webkit-scrollbar{
     visibility: hidden;
 } */
@@ -172,8 +223,11 @@ margin-bottom: 2rem;
     min-width:300px;
     height: 330px;
     margin:0 1rem;
-    box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.075),-1px -1px 3px  rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.075),-1px -1px 3px  rgba(0, 0, 0, 0.075);
+            box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.075),-1px -1px 3px  rgba(0, 0, 0, 0.075);
     border-bottom: 1px solid rgba(0, 0, 0, 0.048) ;
+  -webkit-transition: left 0.8s;
+  -o-transition: left 0.8s;
   transition: left 0.8s;
     border-top-left-radius:0.4rem;
     border-top-right-radius:0.4rem;
@@ -229,10 +283,19 @@ margin-bottom: 2rem;
 }
 .main-ourteam__container
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     
 }
 .main-ourteam__serviceBox
@@ -240,7 +303,8 @@ margin-bottom: 2rem;
     width: 100%;
     background-color:#fff;
     padding:2rem 1rem;
-    box-shadow: 1px 1px 8px   rgba(0, 0, 0, 0.062);
+    -webkit-box-shadow: 1px 1px 8px   rgba(0, 0, 0, 0.062);
+            box-shadow: 1px 1px 8px   rgba(0, 0, 0, 0.062);
     margin:1rem 0;
     text-align: center;
 }
@@ -272,8 +336,13 @@ margin-bottom: 2rem;
     padding:2rem 0 5rem;
 }
 .main-contactus__container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .main-contactus__companyinfo{
     background-color: #fff;
@@ -281,6 +350,8 @@ margin-bottom: 2rem;
 }
 .main-contactus__contactInfo
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin:1.5rem 0;
 
@@ -313,8 +384,13 @@ margin-bottom: 2rem;
 }
 .main-contactus__inputContainer
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 1rem;
 }
 .main-contactus__inputLabel
@@ -353,8 +429,13 @@ outline: none;
 @media (min-width:55rem){
  
    .main-aboutus__body{
-       flex-direction: row;
-       justify-content: center;
+       -webkit-box-orient: horizontal;
+       -webkit-box-direction: normal;
+           -ms-flex-direction: row;
+               flex-direction: row;
+       -webkit-box-pack: center;
+           -ms-flex-pack: center;
+               justify-content: center;
    }
    .main-aboutus__body--image{
 
@@ -368,8 +449,13 @@ outline: none;
    }
    .main-ourteam__container
    {
-       flex-direction: row;
-       align-items: center;
+       -webkit-box-orient: horizontal;
+       -webkit-box-direction: normal;
+           -ms-flex-direction: row;
+               flex-direction: row;
+       -webkit-box-align: center;
+           -ms-flex-align: center;
+               align-items: center;
        
        
    }
@@ -377,14 +463,22 @@ outline: none;
    {
        width:30%;
        margin-right:2rem;
-       align-self: flex-start;
+       -ms-flex-item-align: start;
+           align-self: flex-start;
        max-width: 450px;
    }
 
    .main-contactus__container{
-       flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
+       -webkit-box-orient: horizontal;
+       -webkit-box-direction: normal;
+           -ms-flex-direction: row;
+               flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
    }
    .main-contactus__companyinfo
    {
@@ -410,5 +504,4 @@ outline: none;
 }
 
 /*responsive end */
-
 
